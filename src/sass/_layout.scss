@@ -3,6 +3,21 @@ body {
     font-size: 1.2em;
 }
 
+tr {
+    a {
+        display: inline;
+        padding: 0.2em;
+        margin-left: 1em;
+        appearance: button;
+        text-decoration: underline;
+        color: initial;
+        &:hover {
+            color: lighten(black, 30%);
+            background-color: darken($platecolor, 30%);
+        }
+    }
+}
+
 td {
     padding: 0.5em;
     border: 1px solid black;

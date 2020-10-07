@@ -46,22 +46,18 @@ const fetchCourse = async() => {
         let tr = createNode('tr');
         Object.keys(course).forEach(key => {
             let td = createNode('td');
-            if (key !== 'syllabus') {
-                let text = document.createTextNode(course[key]);
-                append(td, text);
-                append(tr, td);
-            } else if (key == 'syllabus') {
-                let a = createNode('a');
-                let atext = document.createTextNode(course.syllabus);
-                a.setAttribute('href', course.syllabus);
-                append(a, atext);
-                append(td, a);
-                append(tr, td);
-                tr.setAttribute('id', course.code);
-            }
+            let text = document.createTextNode(course[key]);
+            append(td, text);
+            append(tr, td);
             td.classList.add(key);
-            td.setAttribute('contenteditable', '');
+            td.setAttribute('contenteditable', 'true');
         });
+        let aC = createNode('a');
+        let aCtext = document.createTextNode('Kursplan');
+        aC.setAttribute('href', course.syllabus);
+        aC.setAttribute('target', '_blank');
+        append(aC, aCtext);
+        append(tr, aC);
         let upButton = createNode('button');
         let deButton = createNode('button');
         let btext = document.createTextNode('Uppdatera');
