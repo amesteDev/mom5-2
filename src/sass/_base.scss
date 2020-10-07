@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Open+Sans&display=swap');
+//variables
+$base-color: rgb(183,
+231,
+171);
+$highlight:rgb(61,
+34,
+52);
+$platecolor: rgba(186,
+187,
+191,
+0.365);
+$bigfont: 'Arial',
+'Helveteica',
+sans-serif;
+$smallfont: 'Times New Roman',
+'Times',
+sans-serif;
+//mixins
+@mixin divborder($color) {
+    border-bottom: 1em solid $compcolor;
+    border-top: 1em solid $color;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 0.5em;
+    border-top-right-radius: 2em;
+    border-top-left-radius: 0.5em;
+    padding: 2em 0em;
+}
+
+@mixin headings {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @content;
+    }
+}
+
+@mixin resp($size) {
+    @if $size==small {
+        @media (max-width: 700px) {
+            @content;
+        }
+    }
+    @else if $size==large {
+        @content;
+    }
+}

@@ -1,0 +1,8 @@
+@mixin button {
+    margin: 1em;
+    padding: 1em;
+    background-color: rgba(182, 155, 155, 0.432);
+    font-family: $bigfont;
+    font-weight: bold;
+    border-radius: 1em;
+}

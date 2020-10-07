@@ -1,0 +1,61 @@
+body {
+    background-color: $base-color;
+    font-size: 1.2em;
+}
+
+td {
+    padding: 0.5em;
+    border: 1px solid black;
+}
+
+table {
+    margin: auto;
+}
+
+button,
+input[type=submit] {
+    @include button;
+}
+
+.wrapper {
+    max-width: 1080px;
+    min-height: 100vh;
+    padding: 1em;
+    margin: auto;
+    background-color: $platecolor;
+    padding-top: 2em;
+}
+
+form {
+    margin: auto;
+    text-align: center;
+}
+
+input[type=text],
+label {
+    padding: 1em;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+@include headings {
+    font-family: $bigfont;
+    text-align: center;
+    color: $highlight;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+
+#popup {
+    background-color: rgb(138, 138, 138);
+    border-radius: 1em;
+    display: none;
+    width: 200px;
+    height: 75px;
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    padding: 1em;
+}

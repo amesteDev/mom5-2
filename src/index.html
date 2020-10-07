@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Template</title>
+</head>
+
+<body>
+    <div id="popup"></div>
+    <div class="wrapper">
+        <table>
+            <thead>
+                <th>Kurskod</th>
+                <th>Kursnamn</th>
+                <th>Progression</th>
+                <th>Kursplan</th>
+            </thead>
+            <tbody id="kram"></tbody>
+        </table>
+        <h3>Lägg till ny kurs</h3>
+        <form method="POST" action="" id="form">
+            <label for="code">Kurskod</label>
+            <input type="text" id="code" class="code" name="code">
+            <label for="name">Kursnamn</label>
+            <input type="text" id="name" class="name" name="name">
+            <label for="prog">Progression</label>
+            <input type="text" id="prog" class="prog" name="prog">
+            <label for="syllabus">Kursplan</label>
+            <input type="text" id="syllabus" class="syllabus" name="syllabus">
+            <input type="submit" text="Spara">
+        </form>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
